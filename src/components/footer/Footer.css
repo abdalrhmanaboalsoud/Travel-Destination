@@ -1,0 +1,9 @@
+.social-media{
+    display: block;
+}
+.social-link{
+    display: inline-block;
+    margin-right: 10px; /* Adjust as needed to create space between links */
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Change link color as needed */
+} 
