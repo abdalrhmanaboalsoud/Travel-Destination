@@ -1,0 +1,10 @@
+#title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #4A148C; /* Deep Purple */
+    text-shadow: 2px 2px 4px #B39DDB; /* Light Purple shadow */
+    background: -webkit-linear-gradient(#7E57C2, #D1C4E9); /* Gradient background from Dark Purple to Light Purple */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Making the fill color transparent to let the background gradient show through */
+}

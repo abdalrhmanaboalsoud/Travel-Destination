@@ -1,6 +1,7 @@
 import Home from './components/home/Home';
+import './DarkMode.css'
 import './App.css';
-const toursData = require('./data/db.json');
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">

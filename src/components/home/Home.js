@@ -1,24 +1,21 @@
 import Header from '../header/Header';
 import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
+import TourDetails from '../TourDetails/TourDetails.js';
+import { Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const toursData = require('../../data/db.json');
+
 
 function Home() {
     return (
         <div className="home">
             <Header />
-            {
-                toursData.map(element => {
-                    return (
-                        <div className='mapTours'>
-                        <Tours tour_name={element.name} tour_image={element.image} tour_price={element.price}  />
-                        <hr style={{ width: '200px', borderRadius: '5px' }}></hr>
-                        </div>
-                    )
-                })
-            }
-
+            <Routes>
+                <Route path="/" element={<Tours />} />
+                <Route path="/city/:id" element={<TourDetails />} />
+            </Routes>
+            {/* <Tours /> */}
             <Footer />
         </div>
     )
