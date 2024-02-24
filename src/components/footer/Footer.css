@@ -3,7 +3,11 @@
 }
 .social-link{
     display: inline-block;
-    margin-right: 10px; /* Adjust as needed to create space between links */
-    text-decoration: none; /* Remove underline */
-    color: #000; /* Change link color as needed */
+    margin-right: 20px; 
+    margin-left: 20px;
+    text-decoration: none;
 } 
+.author {
+font:  bold;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+}
