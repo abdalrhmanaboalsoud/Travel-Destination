@@ -1,0 +1,34 @@
+/* Add custom styles here if needed, overriding Bootstrap defaults */
+.navbar-brand {
+    font-weight: bold; /* Emphasize brand name */
+    color: #333; /* Adjust brand name color */
+  }
+ .navbar {
+    --bs-bg-opacity: 1;
+    background-color: rgb(75 81 87) !important;
+}
+  .nav-link {
+    color: #333; /* Adjust link color */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* Emphasize active link */
+    /* Optional styling for active link, e.g., background color */
+  }
+  
+  /* Add media query styles for responsiveness (optional) */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+  }
+  #title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #4A148C; /* Deep Purple */
+    text-shadow: 2px 2px 4px #B39DDB; /* Light Purple shadow */
+    background: -webkit-linear-gradient(#7E57C2, #D1C4E9); /* Gradient background from Dark Purple to Light Purple */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Making the fill color transparent to let the background gradient show through */
+}  

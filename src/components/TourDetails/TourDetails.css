@@ -1,0 +1,33 @@
+.tour-details {
+    max-width: 800px; 
+    margin: 2rem auto; 
+    padding: 1.5rem;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #896666; 
+    color: black;
+  }
+  
+  .tour-details h2 {
+    text-align: center; 
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tour-details img {
+    width: 500px; 
+    height: 500%; 
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  .tour-details p {
+    line-height: 1.5; 
+    margin-bottom: 1rem;
+  }
+  
+  .city-not-found {
+    text-align: center;
+    color: #f00; 
+  }
+  

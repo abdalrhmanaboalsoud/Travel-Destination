@@ -1,30 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Home from '../../home/Home';
-import Navbars from '../../header/Navbar/Navbar';
+import React from "react";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { useState } from "react";
+import "./Tour.css";
+
 function Tour(props) {
-    return (
-        <div>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={props.tour_image} alt="TourImage" />
-                <Card.Body>
-                    <Card.Title>{props.tour_name}</Card.Title>
-                    <Card.Text>
-                        {props.tour_des}
-                    </Card.Text>
-                    <Card.Text>
-                        <h4>${props.tour_price}</h4>
-                    </Card.Text>
-                    {/* Link to the city details page */}
-                    <Link to={`/city/${props.city.id}`}>
-                        <Button variant="primary">See More</Button>
-                    </Link>
-                </Card.Body>
-            </Card>
-        </div>
-    );
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
+  const renderDescription = () => {
+    const maxCharacters = 300;
+    const description = props.tour_des;
+
+    return showMore ? description : `${description.substring(0, maxCharacters)}...`;
+  };
+
+  return (
+    <div className="tour-container">
+      <Card className="tour-card">
+        <Link to={`/city/${props.tour_id}`}>
+          <Card.Img variant="top" className="tour-img" src={props.tour_image} alt="TourImage" />
+        </Link>
+        <Card.Body>
+          <Card.Title className="tour-title">{props.tour_name}</Card.Title>
+          <Card.Text className={`tour-description ${showMore ? "show-more" : ""}`}>
+            {renderDescription()}
+          </Card.Text>
+          <Button className="see-more-btn" onClick={toggleShowMore}>
+            {showMore ? "See less" : "See more"}
+          </Button>
+          <Card.Text className="tour-price">
+            <h4>${props.tour_price}</h4>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }
 
 export default Tour;

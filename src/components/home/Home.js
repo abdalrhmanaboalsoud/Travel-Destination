@@ -1,4 +1,4 @@
-import Header from '../header/Header';
+import Navbar from '../Navbar/Navbar.js';
 import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
 import TourDetails from '../TourDetails/TourDetails.js';
@@ -10,12 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Home() {
     return (
         <div className="home">
-            <Header />
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Tours />} />
                 <Route path="/city/:id" element={<TourDetails />} />
             </Routes>
-            {/* <Tours /> */}
             <Footer />
         </div>
     )
